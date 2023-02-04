@@ -11,4 +11,4 @@ func _on_viejito_dialog():
 	yield(dialog("little_chef", "Acompañeme a la mesa por favor"), "done")
 	yield(dialog("viejito", "Bueno"), "done")
 
-	get_tree().change_scene("res://scenes/viejito_sentado_en_la_mesa.tscn")
+	get_tree().change_scene("res://scenes/viejito_pidiendo_X.tscn")

@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/viejito_llama_a_la_puerta.gd" type="Script" id=3]
 [ext_resource path="res://maps/kitchen.tscn" type="PackedScene" id=5]
 
-[node name="viejito_llama_a_la_puerta" type="Node"]
+[node name="viejito_llama_a_la_puerta" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="kitchen" parent="." instance=ExtResource( 5 )]

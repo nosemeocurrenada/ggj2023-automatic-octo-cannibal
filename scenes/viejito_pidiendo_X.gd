@@ -16,6 +16,5 @@ func _on_portal_to_kitchen_player_entered():
 	if not pregunto_ya:
 		yield(dialog("little_chef", "Tengo que preguntarle al viejito que quiere comer"), "done")
 	else:
-		yield(dialog("big_cheff", "AAAAAAAAAAAAAAAA"), "done")
-		yield(dialog("big_cheff", "La siguiente escena no está cocinada todavíá"), "done")
+		get_tree().change_scene("res://scenes/consulta_chef_sobre_X.tscn")
 		

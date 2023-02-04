@@ -6,7 +6,7 @@
 [ext_resource path="res://characters/little_chef.tscn" type="PackedScene" id=4]
 [ext_resource path="res://characters/viejito.tscn" type="PackedScene" id=5]
 
-[node name="viejito_en_la_recepcion" type="Node"]
+[node name="viejito_en_la_recepcion" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="dinning_room" parent="." instance=ExtResource( 1 )]

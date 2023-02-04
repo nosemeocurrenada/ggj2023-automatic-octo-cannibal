@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 class_name GameScene
 
 var canvas_layer: CanvasLayer = null
