@@ -2,7 +2,7 @@ extends Control
 
 
 func _on_boton_jugar_pressed():
-	get_tree().change_scene("res://scenes/viejito_en_puerta.tscn")
+	get_tree().change_scene("res://scenes/viejito_llama_a_la_puerta.tscn")
 
 
 func _on_boton_creditos_pressed():
