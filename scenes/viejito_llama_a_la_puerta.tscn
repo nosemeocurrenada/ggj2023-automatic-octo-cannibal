@@ -2,21 +2,23 @@
 
 [ext_resource path="res://characters/little_chef.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/player_camera.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/viejito_en_puerta.gd" type="Script" id=3]
+[ext_resource path="res://scenes/viejito_llama_a_la_puerta.gd" type="Script" id=3]
 [ext_resource path="res://maps/kitchen.tscn" type="PackedScene" id=5]
 
 [node name="viejito_llama_a_la_puerta" type="Node"]
 script = ExtResource( 3 )
 
 [node name="kitchen" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, 288 )
 
 [node name="little_chef" parent="." instance=ExtResource( 1 )]
-position = Vector2( 384, 96 )
+position = Vector2( 384, 384 )
 
 [node name="player_camera" parent="." instance=ExtResource( 2 )]
-position = Vector2( 384, 384 )
+position = Vector2( 96, 480 )
 
 [connection signal="player_entered" from="kitchen/portal_to_dinning_room" to="." method="_on_portal_to_dinning_room_player_entered"]
 [connection signal="player_entered" from="kitchen/portal_to_backdoors" to="." method="_on_portal_to_backdoors_player_entered"]
+[connection signal="dialog" from="kitchen/big_chef" to="." method="_on_big_chef_dialog"]
 
 [editable path="kitchen"]

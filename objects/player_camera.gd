@@ -7,5 +7,4 @@ func _process(delta):
 		assert(false, "No player found for camera to follow")
 		
 	var player: Node2D = players.front()
-	# TODO: Se puede interpolar y mover mas suavemente
-	self.position = player.position
+	self.position = self.position.linear_interpolate(player.position, 0.2)
