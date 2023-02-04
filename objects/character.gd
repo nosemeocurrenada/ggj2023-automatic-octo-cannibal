@@ -21,6 +21,10 @@ func _process(delta):
 
 	if direction.length_squared() > 0.1:
 		move_and_slide(direction.normalized() * character_velocity)
+		if direction.x > 0:
+			$sprite.scale.x = 1
+		else:
+			$sprite.scale.x = -1
 
 
 func _on_dialog_area_body_entered(body: Node2D):
