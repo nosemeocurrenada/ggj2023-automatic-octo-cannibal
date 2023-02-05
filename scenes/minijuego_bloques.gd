@@ -1,6 +1,6 @@
 extends GameScene
 
-const block_scene = preload("res://objects/bloques/block.tscn")
+const block_scene = preload("res://objects/games/bloques/block.tscn")
 const REQUIRED_BLOCKS = 4
 var won = false
 
