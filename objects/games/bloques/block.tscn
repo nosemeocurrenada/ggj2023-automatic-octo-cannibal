@@ -1,0 +1,88 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://objects/games/bloques/block.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites.png" type="Texture" id=2]
+[ext_resource path="res://assets/tiles.png" type="Texture" id=3]
+[ext_resource path="res://assets/bloque1.png" type="Texture" id=4]
+[ext_resource path="res://assets/bloque3.png" type="Texture" id=5]
+[ext_resource path="res://assets/bloque6.png" type="Texture" id=6]
+[ext_resource path="res://assets/bloque4.png" type="Texture" id=7]
+[ext_resource path="res://assets/bloque2.png" type="Texture" id=8]
+[ext_resource path="res://assets/bloque5.png" type="Texture" id=9]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 144, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 192, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 240, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 288, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 336, 0, 48, 48 )
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 6 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 24, 24 )
+
+[node name="block" type="RigidBody2D" groups=["block"]]
+position = Vector2( 544, 249 )
+mode = 3
+script = ExtResource( 1 )
+
+[node name="sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 9 )
+frame = 6
+
+[node name="sprite2" type="AnimatedSprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+frames = SubResource( 9 )
+frame = 6
+
+[node name="soga" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+offset = Vector2( 0, -59 )
+region_enabled = true
+region_rect = Rect2( 363, 11, 19, 169 )
+
+[node name="shape" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 10 )
+
+[node name="tween" type="Tween" parent="."]
