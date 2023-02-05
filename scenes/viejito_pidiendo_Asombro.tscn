@@ -15,7 +15,7 @@ script = ExtResource( 1 )
 position = Vector2( 336, 144 )
 
 [node name="little_chef" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1008, 192 )
+position = Vector2( 960, 192 )
 
 [node name="player_camera" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1104, 192 )
