@@ -1,18 +1,32 @@
 extends GameScene
 
+var talked_to_big_chef = false
+
+
 func _cutscene():
 	dialog("door", "** Sonido de llamador de ángeles **")
 
 
 func _on_portal_to_backdoors_player_entered():
-	dialog("little_chef", "No debería entrar en la recepción")
+	dialog("big_chef", "Todavía no necesitas entrar ahí")
 
 
 func _on_portal_to_dinning_room_player_entered():
-	get_tree().change_scene("res://scenes/viejito_en_la_recepcion.tscn")
+	if talked_to_big_chef == true:
+		get_tree().change_scene("res://scenes/viejito_en_la_recepcion.tscn")
+	else:
+		yield(dialog("big_chef", "Llegó un nuevo visitante"), "done")
+		yield(dialog("little_chef", "..."), "done")
+		yield(dialog("big_chef", "Ve a darle la bienvenida"), "done")
+		talked_to_big_chef = true
 
 
 func _on_big_chef_dialog():
-	yield(dialog("big_chef", "Llegó un nuevo viejito"), "done")
-	yield(dialog("big_chef", "andá para la izquierda chango"), "done")
-	yield(dialog("little_chef", "ok ok"), "done")
+	if talked_to_big_chef == false:
+		yield(dialog("big_chef", "Llegó un nuevo visitante"), "done")
+		yield(dialog("little_chef", "..."), "done")
+		yield(dialog("big_chef", "Ve a darle la bienvenida"), "done")
+		talked_to_big_chef = true
+
+	else:
+		yield(dialog("big_chef", "Debes ir al comedor a darle la bienvenida al visitante"), "done")

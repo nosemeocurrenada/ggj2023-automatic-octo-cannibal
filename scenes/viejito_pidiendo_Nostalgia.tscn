@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/viejito_pidiendo_X.gd" type="Script" id=1]
+[ext_resource path="res://characters/little_chef.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/player_camera.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/viejito.tscn" type="PackedScene" id=4]
+[ext_resource path="res://maps/dinning_room.tscn" type="PackedScene" id=5]
+
+[node name="viejito_sentado_en_la_mesa" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="viejito" parent="." instance=ExtResource( 4 )]
+position = Vector2( 384, 144 )
+
+[node name="dinning_room" parent="." instance=ExtResource( 5 )]
+
+[node name="little_chef" parent="." instance=ExtResource( 2 )]
+position = Vector2( 432, 240 )
+
+[node name="player_camera" parent="." instance=ExtResource( 3 )]
+position = Vector2( 192, 240 )
+
+[connection signal="dialog" from="viejito" to="." method="_on_viejito_dialog"]
+[connection signal="player_entered" from="dinning_room/portal_to_kitchen" to="." method="_on_portal_to_kitchen_player_entered"]
+
+[editable path="dinning_room"]

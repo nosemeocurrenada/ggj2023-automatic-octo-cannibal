@@ -1,20 +1,24 @@
 extends GameScene
 
-var pregunto_ya = false
+var asked_oldman = false
 
 func _on_viejito_dialog():
-	yield(dialog("little_chef", "Sabe que va a querer comer?"), "done")
-	yield(dialog("viejito", "La verdad que no"), "done")
-	yield(dialog("little_chef", "Bueno, digame algo que le guste"), "done")
-	yield(dialog("viejito", "Me gusta el arte"), "done")
-	yield(dialog("little_chef", "..."), "done")
-	pregunto_ya = true
-
+	if not asked_oldman:
+		yield(dialog("little_chef", "???"), "done")
+		yield(dialog("viejito", "Este lugar me hace sentir en casa"), "done")
+		yield(dialog("viejito", "Mi abuela tenia un restaurante similar detrás de dónde vivíamos"), "done")
+		yield(dialog("little_chef", "..."), "done")
+		yield(dialog("viejito", "Siempre la asocio al olor de la tierra mojada, pero ya no sé por qué. Fue hace mucho tiempo…"), "done")
+		yield(dialog("viejito", "Ojalá pudiera recordar"), "done")	
+		yield(dialog("little_chef", "..."), "done")
+		asked_oldman = true
+	else:
+		yield(dialog("viejito", "Daria lo que fuera para poder recordar…"), "done")
 
 
 func _on_portal_to_kitchen_player_entered():
-	if not pregunto_ya:
-		yield(dialog("little_chef", "Tengo que preguntarle al viejito que quiere comer"), "done")
+	if not asked_oldman:
+		yield(dialog("big_chef", "No olvides charlar con el visitante, siempre tienen historias interesantes que recordar"), "done")
 	else:
-		get_tree().change_scene("res://scenes/consulta_chef_sobre_X.tscn")
+		get_tree().change_scene("res://scenes/consulta_chef_sobre_Nostalgia.tscn")
 		

@@ -14,7 +14,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://objects/dialog.gd"
 }, {
-"base": "Node2D",
+"base": "Node",
 "class": "GameScene",
 "language": "GDScript",
 "path": "res://objects/game_scene.gd"
