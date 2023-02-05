@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/Interiors_free_48x48.png" type="Texture" id=1]
+[ext_resource path="res://assets/kitchenwall.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24, 24 )
@@ -8,16 +8,17 @@ extents = Vector2( 24, 24 )
 [node name="wall" type="Node2D"]
 
 [node name="sprite" type="Polygon2D" parent="."]
+visible = false
 color = Color( 0.458824, 0.345098, 0.172549, 1 )
 polygon = PoolVector2Array( -24, -24, -24, 24, 24, 24, 24, -24 )
 
 [node name="body" type="StaticBody2D" parent="."]
-visible = false
 
 [node name="shape" type="CollisionShape2D" parent="body"]
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="body"]
+scale = Vector2( 0.287633, 0.287633 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 432, 147, 48, 48 )
+region_rect = Rect2( 0, 0, 160, 160 )

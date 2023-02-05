@@ -1,41 +1,60 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/menu/creditos.gd" type="Script" id=1]
+[ext_resource path="res://assets/Nubes.png" type="Texture" id=2]
+[ext_resource path="res://assets/volver_hover.png" type="Texture" id=3]
+[ext_resource path="res://assets/volver.png" type="Texture" id=4]
 
 [node name="creditos" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 
+[node name="Fondo" type="Sprite" parent="."]
+position = Vector2( 268, 154 )
+scale = Vector2( 0.283366, 0.283366 )
+texture = ExtResource( 2 )
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+modulate = Color( 0.054902, 0.054902, 0.054902, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -121.0
-margin_top = -138.5
-margin_right = 121.0
-margin_bottom = 138.5
+margin_left = -91.0
+margin_top = -115.0
+margin_right = 151.0
+margin_bottom = 162.0
+rect_scale = Vector2( 0.86384, 0.86384 )
 alignment = 1
 
 [node name="titulo" type="Label" parent="VBoxContainer"]
-margin_top = 60.0
+margin_top = 21.0
 margin_right = 242.0
-margin_bottom = 193.0
+margin_bottom = 256.0
 text = "GGJ 2023
 
-Cosas
-Fulano Mengano
+Arte
 
-Mas cosas
-Cosme Fulanito
+Romina
+
+Programacion
+
+Jimmy
+Nikita
+
+Narrativa
+Melissa
 "
 align = 1
 
-[node name="boton_volver" type="Button" parent="VBoxContainer"]
-margin_top = 197.0
-margin_right = 242.0
-margin_bottom = 217.0
-text = "Volver"
+[node name="boton_volver" type="TextureButton" parent="."]
+margin_left = 151.0
+margin_top = 229.0
+margin_right = 394.0
+margin_bottom = 249.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 3 )
 
-[connection signal="pressed" from="VBoxContainer/boton_volver" to="." method="_on_boton_volver_pressed"]
+[connection signal="pressed" from="boton_volver" to="." method="_on_boton_volver_pressed"]

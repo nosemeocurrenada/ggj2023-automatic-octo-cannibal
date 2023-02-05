@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blue.png-febe91f205a1eb4db51db73579ff5524.stex"
+path="res://.import/volver.png-c32a1bb6f1bb511d32a1d7494b62c2b5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/blue.png"
-dest_files=[ "res://.import/blue.png-febe91f205a1eb4db51db73579ff5524.stex" ]
+source_file="res://assets/volver.png"
+dest_files=[ "res://.import/volver.png-c32a1bb6f1bb511d32a1d7494b62c2b5.stex" ]
 
 [params]
 
