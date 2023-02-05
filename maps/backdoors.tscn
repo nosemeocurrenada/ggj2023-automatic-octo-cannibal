@@ -15,6 +15,18 @@ position = Vector2( 96, 96 )
 [node name="floor2" parent="floors" instance=ExtResource( 4 )]
 position = Vector2( 96, 144 )
 
+[node name="floor178" parent="floors" instance=ExtResource( 4 )]
+position = Vector2( 48, 192 )
+
+[node name="floor179" parent="floors" instance=ExtResource( 4 )]
+position = Vector2( 768, 48 )
+
+[node name="floor180" parent="floors" instance=ExtResource( 4 )]
+position = Vector2( 1200, 48 )
+
+[node name="floor181" parent="floors" instance=ExtResource( 4 )]
+position = Vector2( 1008, 336 )
+
 [node name="floor3" parent="floors" instance=ExtResource( 4 )]
 position = Vector2( 96, 192 )
 
