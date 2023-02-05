@@ -129,7 +129,6 @@ __meta__ = {
 
 [node name="sprite" type="AnimatedSprite" parent="minijuego_tomates/tomategirando"]
 frames = SubResource( 18 )
-frame = 4
 playing = true
 
 [node name="shape" type="CollisionShape2D" parent="minijuego_tomates/tomategirando"]
