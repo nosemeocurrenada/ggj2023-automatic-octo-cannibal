@@ -11,7 +11,7 @@ color = Color( 0.458824, 0.345098, 0.172549, 1 )
 polygon = PoolVector2Array( -24, -24, -24, 24, 24, 24, 24, -24 )
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.30007, 0.30007 )
+scale = Vector2( 0.291509, 0.291509 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 160, 160 )
