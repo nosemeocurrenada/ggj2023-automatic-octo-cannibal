@@ -2,7 +2,7 @@ extends GameScene
 
 const tomato_scene = preload("res://objects/games/tomates/tomato.tscn")
 const velocity = 200
-export var GOAL = 2
+export var GOAL = 10
 var rng = RandomNumberGenerator.new()
 var score = 0
 var game_finished = false # por algun motivo no funcionaba desde _process
