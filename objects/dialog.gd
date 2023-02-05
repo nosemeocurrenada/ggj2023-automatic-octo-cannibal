@@ -14,11 +14,11 @@ func set_text(text):
 	
 func set_character(character):
 	if character == "little_chef":
-		$panel/margin/hcontainer/image.self_modulate = Color.green
+		$panel/margin/hcontainer/little_chef.visible = true
 	elif character == "big_chef":
-		$panel/margin/hcontainer/image.self_modulate = Color.red
+		$panel/margin/hcontainer/big_chef.visible = true
 	elif character == "viejito":
-		$panel/margin/hcontainer/image.self_modulate = Color.cyan
+		$panel/margin/hcontainer/viejito.visible = true
 	else:
 		$panel/margin/hcontainer/image.hide()
 
