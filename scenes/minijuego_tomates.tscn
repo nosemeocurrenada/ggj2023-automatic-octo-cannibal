@@ -76,3 +76,14 @@ position = Vector2( 11, 0 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wall2"]
 position = Vector2( 0, 84.5 )
 shape = SubResource( 12 )
+
+[node name="spawn_min" type="Position2D" parent="."]
+position = Vector2( 45, 10 )
+
+[node name="spawn_max" type="Position2D" parent="."]
+position = Vector2( 300, 25 )
+
+[node name="timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]
