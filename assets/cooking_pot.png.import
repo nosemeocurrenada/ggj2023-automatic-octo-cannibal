@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles.png-0d11a4bcdfb48056f67a66da241684a1.stex"
+path="res://.import/cooking_pot.png-a98eb2641fdbd7993c4a2bbcf35026b3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles.png"
-dest_files=[ "res://.import/tiles.png-0d11a4bcdfb48056f67a66da241684a1.stex" ]
+source_file="res://assets/cooking_pot.png"
+dest_files=[ "res://.import/cooking_pot.png-a98eb2641fdbd7993c4a2bbcf35026b3.stex" ]
 
 [params]
 
