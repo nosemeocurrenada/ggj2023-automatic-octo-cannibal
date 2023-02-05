@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/menu/principal.gd" type="Script" id=1]
 [ext_resource path="res://assets/Jugar.png" type="Texture" id=2]
 [ext_resource path="res://assets/Title.png" type="Texture" id=3]
 [ext_resource path="res://assets/Creditos.png" type="Texture" id=4]
 [ext_resource path="res://assets/Salir.png" type="Texture" id=5]
+[ext_resource path="res://assets/jugar_hover.png" type="Texture" id=6]
+[ext_resource path="res://assets/creditos_hoverng.png" type="Texture" id=7]
+[ext_resource path="res://assets/salir_hover.png" type="Texture" id=8]
 
 [node name="principal" type="Control"]
 anchor_right = 1.0
@@ -22,6 +25,8 @@ margin_top = 109.0
 margin_right = 384.0
 margin_bottom = 149.0
 texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 6 )
 
 [node name="boton_creditos" type="TextureButton" parent="."]
 margin_left = 142.0
@@ -29,6 +34,8 @@ margin_top = 139.0
 margin_right = 385.0
 margin_bottom = 179.0
 texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 7 )
 
 [node name="boton_salir" type="TextureButton" parent="."]
 margin_left = 141.0
@@ -36,6 +43,8 @@ margin_top = 170.0
 margin_right = 384.0
 margin_bottom = 210.0
 texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 8 )
 
 [connection signal="pressed" from="boton_jugar" to="." method="_on_boton_jugar_pressed"]
 [connection signal="pressed" from="boton_creditos" to="." method="_on_boton_creditos_pressed"]
