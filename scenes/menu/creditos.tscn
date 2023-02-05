@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/menu/creditos.gd" type="Script" id=1]
 [ext_resource path="res://assets/Nubes.png" type="Texture" id=2]
@@ -6,6 +6,13 @@
 [ext_resource path="res://assets/volver.png" type="Texture" id=4]
 
 [sub_resource type="Theme" id=1]
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://assets/Minecraftia-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 5 )
 
 [sub_resource type="DynamicFontData" id=2]
 font_path = "res://assets/Minecraftia-Regular.ttf"
@@ -18,6 +25,7 @@ font_data = SubResource( 2 )
 
 [sub_resource type="Theme" id=4]
 RichTextLabel/colors/default_color = Color( 0.0117647, 0.0313726, 0.239216, 1 )
+RichTextLabel/fonts/bold_font = SubResource( 6 )
 RichTextLabel/fonts/normal_font = SubResource( 3 )
 
 [node name="creditos" type="Control"]
@@ -36,20 +44,30 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -93.0
-margin_top = -115.0
-margin_right = 206.0
-margin_bottom = 162.0
+margin_left = -115.0
+margin_top = -117.0
+margin_right = 184.0
+margin_bottom = 137.0
 rect_scale = Vector2( 0.821474, 0.821474 )
 theme = SubResource( 1 )
 alignment = 1
 
 [node name="titulo" type="RichTextLabel" parent="VBoxContainer"]
-margin_left = 48.0
-margin_top = 14.0
-margin_right = 200.0
-margin_bottom = -2.0
+margin_right = 299.0
+margin_bottom = 254.0
 theme = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center][b]GGJ 2023
+
+Arte
+Romina
+
+Programacion
+Jimmy
+Nikita
+
+Narrativa
+Melissa"
 meta_underlined = false
 tab_size = 0
 text = "GGJ 2023
@@ -66,10 +84,10 @@ Melissa"
 fit_content_height = true
 
 [node name="boton_volver" type="TextureButton" parent="."]
-margin_left = 151.0
-margin_top = 229.0
-margin_right = 394.0
-margin_bottom = 249.0
+margin_left = 141.0
+margin_top = 227.0
+margin_right = 384.0
+margin_bottom = 247.0
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 3 )
