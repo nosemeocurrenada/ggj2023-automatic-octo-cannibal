@@ -6,6 +6,13 @@
 extents = Vector2( 24, 24 )
 
 [node name="wall" type="Node2D"]
+scale = Vector2( 0.605491, 0.605491 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.498895, 0.498895 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 160, 160 )
 
 [node name="sprite" type="Polygon2D" parent="."]
 visible = false
@@ -13,12 +20,7 @@ color = Color( 0.458824, 0.345098, 0.172549, 1 )
 polygon = PoolVector2Array( -24, -24, -24, 24, 24, 24, 24, -24 )
 
 [node name="body" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="shape" type="CollisionShape2D" parent="body"]
 shape = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="body"]
-scale = Vector2( 0.287633, 0.287633 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 160, 160 )
