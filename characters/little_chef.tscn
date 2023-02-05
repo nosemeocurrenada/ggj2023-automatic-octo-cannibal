@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/chefsitoright.png" type="Texture" id=4]
 
 [node name="little_chef" groups=["player"] instance=ExtResource( 1 )]
+z_index = 1
 player_controlled = true
 
 [node name="sprite" parent="." index="0"]
