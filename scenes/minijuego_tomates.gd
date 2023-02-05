@@ -18,22 +18,18 @@ func _process(delta):
 	if Input.is_action_pressed("ui_right"):
 		direction = Vector2.RIGHT
 	$player.move_and_slide(direction.normalized() * velocity)
-	
-	
-	if Input.is_action_just_pressed("ui_select"):
-		_create_apple()
-		
+
 	$score.text = '%s' % (GOAL - score)
 	
 	if GOAL <= score:
 		get_tree().change_scene("res://scenes/consigue_ingrediente_Nostalgia.tscn")
 	
 
-func _create_apple():
+func _create_tomato():
 	var instance = tomato_scene.instance()
 	rng.randomize()
-	instance.position.x = rng.randi_range(30, 300)
-	instance.position.y = 25
+	instance.position.x = rng.randi_range($spawn_min.position.x, $spawn_max.position.x)
+	instance.position.y = rng.randi_range($spawn_min.position.y, $spawn_max.position.y)
 	instance.contact_monitor = true
 	instance.contacts_reported = 3
 	# connect(signal: String, target: Object, method: String, binds: Array = [  ], flags: int = 0)
@@ -44,3 +40,8 @@ func _create_apple():
 func _on_tomate_body_entered(body):
 	body.queue_free()
 	score += 1
+
+
+func _on_timer_timeout():
+	_create_tomato()
+	$timer.wait_time *= .97
