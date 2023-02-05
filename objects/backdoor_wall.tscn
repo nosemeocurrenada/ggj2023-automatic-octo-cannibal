@@ -18,7 +18,7 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.300464, 0.300464 )
+scale = Vector2( 0.305966, 0.305966 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 160, 160 )
