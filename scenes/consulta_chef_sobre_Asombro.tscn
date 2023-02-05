@@ -10,6 +10,7 @@ script = ExtResource( 1 )
 
 [node name="little_chef" parent="." instance=ExtResource( 3 )]
 position = Vector2( 144, 192 )
+z_index = 1
 
 [node name="player_camera" parent="." instance=ExtResource( 4 )]
 position = Vector2( -336, 192 )
