@@ -21,8 +21,11 @@ position = Vector2( 1008, 192 )
 [node name="player_camera" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1056, 192 )
 
+[node name="tween" type="Tween" parent="."]
+
 [connection signal="player_entered" from="dinning_room/portal_to_kitchen" to="." method="_on_portal_to_kitchen_player_entered"]
 [connection signal="dialog" from="viejito" to="." method="_on_viejito_dialog"]
+[connection signal="tween_all_completed" from="tween" to="." method="_on_tween_tween_all_completed"]
 
 [editable path="dinning_room"]
 [editable path="dinning_room/table"]
