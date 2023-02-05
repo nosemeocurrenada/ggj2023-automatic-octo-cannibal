@@ -15,6 +15,7 @@ func _on_viejito_dialog():
 
 
 func _end_game():
+	$llamador_de_angeles.play()
 	$tween.interpolate_property($viejito, 'modulate:a', 1, 0, 3)
 	$tween.start()
 

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/viejito_plato_listo.gd" type="Script" id=1]
 [ext_resource path="res://maps/dinning_room.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/viejito.tscn" type="PackedScene" id=3]
 [ext_resource path="res://characters/little_chef.tscn" type="PackedScene" id=4]
 [ext_resource path="res://objects/player_camera.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/llamador_de_angeles.ogg" type="AudioStream" id=6]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 288, 0 )
@@ -22,6 +23,11 @@ position = Vector2( 960, 192 )
 position = Vector2( 1056, 192 )
 
 [node name="tween" type="Tween" parent="."]
+
+[node name="llamador_de_angeles" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 6 )
+volume_db = -10.649
 
 [connection signal="player_entered" from="dinning_room/portal_to_kitchen" to="." method="_on_portal_to_kitchen_player_entered"]
 [connection signal="dialog" from="viejito" to="." method="_on_viejito_dialog"]
