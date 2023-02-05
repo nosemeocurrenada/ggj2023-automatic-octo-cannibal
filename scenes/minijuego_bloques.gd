@@ -55,4 +55,4 @@ func _on_ocean_body_entered(body: Node2D):
 
 
 func _on_ending_timer_timeout():
-	get_tree().change_scene("res://scenes/consigue_ingrediente_Nostalgia.tscn")
+	get_tree().change_scene("res://scenes/consigue_ingrediente_Asombro.tscn")
