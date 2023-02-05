@@ -3,8 +3,8 @@ extends RigidBody2D
 var seconds_still = 0
 
 func _ready():
-	$sprite.frame = randi() % 4
-	$sprite2.frame = $sprite.frame + 4
+	$sprite.frame = randi() % 9
+	$sprite2.frame = $sprite.frame
 
 
 func is_any_action_just_released():
@@ -22,7 +22,7 @@ func is_still():
 func is_moving_right():
 	return self.mode == MODE_KINEMATIC
 
-func _process(delta):
+func _physics_process(delta):
 	if is_moving_right():
 		if is_any_action_just_released():
 			$soga.queue_free()
