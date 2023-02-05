@@ -3,7 +3,7 @@ extends GameScene
 func _ready():
 	$backdoors/door.visible = false
 	$backdoors/door3.visible = false
-	yield(dialog('viejito', 'Lo que más anhelho son aquellas noches en las que, bajo la luz de la luna, algunos vecinos se juntaban a tocar y bailar las canciones de nuestra patria'), 'done')
+	yield(dialog('viejito', 'Lo que más anhelo son aquellas noches en las que, bajo la luz de la luna, algunos vecinos se juntaban a tocar y bailar las canciones de nuestra patria'), 'done')
 	yield(dialog('viejito', 'Por algunos minutos, era como si todos siguiéramos allá, juntos, unidos, cercanos'), 'done')
 	
 func _on_portal_to_kitchen_player_entered():
