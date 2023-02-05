@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
+[ext_resource path="res://objects/door.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/portal.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/big_chef.tscn" type="PackedScene" id=3]
 [ext_resource path="res://objects/kitchen_floor.tscn" type="PackedScene" id=4]
@@ -10,6 +11,7 @@
 radius = 140.8
 
 [node name="kitchen" type="Node2D"]
+position = Vector2( 20, 0 )
 
 [node name="walls" type="Node2D" parent="."]
 
@@ -570,10 +572,10 @@ position = Vector2( 720, 240 )
 position = Vector2( 720, 288 )
 
 [node name="portal_to_dinning_room" parent="." instance=ExtResource( 2 )]
-position = Vector2( 48, 192 )
+position = Vector2( 72, 194 )
 
 [node name="portal_to_backdoors" parent="." instance=ExtResource( 2 )]
-position = Vector2( 768, 0 )
+position = Vector2( 743, 0 )
 
 [node name="big_chef" parent="." instance=ExtResource( 3 )]
 position = Vector2( 624, 192 )
@@ -587,3 +589,11 @@ shape = SubResource( 1 )
 
 [node name="cooking_pot" type="Sprite" parent="cooking_pot"]
 texture = ExtResource( 5 )
+
+[node name="door" parent="." instance=ExtResource( 1 )]
+position = Vector2( 48, 192 )
+rotation = 4.71239
+
+[node name="door2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 768, 1 )
+rotation = 1.5708
