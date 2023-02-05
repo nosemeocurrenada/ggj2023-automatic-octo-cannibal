@@ -542,7 +542,7 @@ position = Vector2( 768, 0 )
 position = Vector2( 720, 0 )
 
 [node name="portal_to_kitchen" parent="." instance=ExtResource( 2 )]
-position = Vector2( 48, 192 )
+position = Vector2( 73, 192 )
 
 [node name="door" parent="." instance=ExtResource( 3 )]
 position = Vector2( 768, 48 )
