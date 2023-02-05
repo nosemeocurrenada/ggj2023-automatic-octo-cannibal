@@ -6,7 +6,7 @@ func _on_portal_to_dinning_room_player_entered():
 	if not dropped_ingredient_on_pot:
 		yield(dialog('big_chef', 'Los ingredientes cosechados no pueden salir de la cocina hasta que esté listo el plato'), 'done')
 	else:
-		get_tree().change_scene("res://scenes/viejito_pidiendo_Asombro.tscn")
+		get_tree().change_scene("res://scenes/viejito_plato_listo.tscn")
 
 func _on_portal_to_backdoors_player_entered():
 	yield(dialog('big_chef', 'Ya cosechaste los ingredientes necesarios'), 'done')
