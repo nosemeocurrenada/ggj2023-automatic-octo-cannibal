@@ -40,6 +40,7 @@ position = Vector2( 537, 397 )
 
 [node name="shape" type="CollisionPolygon2D" parent="ocean"]
 self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 11, 22 )
 polygon = PoolVector2Array( -248, -16, 220, -12, 265, -177, 462, -218, 608, -208, 457, -18, 187, 70, -262, 0 )
 
 [node name="counter" type="Label" parent="."]
