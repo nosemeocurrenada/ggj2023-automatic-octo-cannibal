@@ -11,14 +11,14 @@
 font_path = "res://assets/Minecraftia-Regular.ttf"
 
 [sub_resource type="DynamicFont" id=3]
+size = 15
+outline_color = Color( 0.0509804, 0.00784314, 0.301961, 1 )
 use_filter = true
-extra_spacing_top = -7
 font_data = SubResource( 2 )
 
 [sub_resource type="Theme" id=4]
-Label/colors/font_color = Color( 0.0117647, 0.105882, 0.333333, 1 )
-Label/colors/font_outline_modulate = Color( 0.0392157, 0.0627451, 0.415686, 1 )
-Label/fonts/font = SubResource( 3 )
+RichTextLabel/colors/default_color = Color( 0.0117647, 0.0313726, 0.239216, 1 )
+RichTextLabel/fonts/normal_font = SubResource( 3 )
 
 [node name="creditos" type="Control"]
 anchor_right = 1.0
@@ -38,17 +38,20 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -93.0
 margin_top = -115.0
-margin_right = 151.0
+margin_right = 206.0
 margin_bottom = 162.0
-rect_scale = Vector2( 0.86384, 0.86384 )
+rect_scale = Vector2( 0.821474, 0.821474 )
 theme = SubResource( 1 )
 alignment = 1
 
-[node name="titulo" type="Label" parent="VBoxContainer"]
-margin_top = 32.0
-margin_right = 244.0
-margin_bottom = 245.0
+[node name="titulo" type="RichTextLabel" parent="VBoxContainer"]
+margin_left = 48.0
+margin_top = 14.0
+margin_right = 200.0
+margin_bottom = -2.0
 theme = SubResource( 4 )
+meta_underlined = false
+tab_size = 0
 text = "GGJ 2023
 
 Arte
@@ -59,9 +62,8 @@ Jimmy
 Nikita
 
 Narrativa
-Melissa
-"
-align = 1
+Melissa"
+fit_content_height = true
 
 [node name="boton_volver" type="TextureButton" parent="."]
 margin_left = 151.0
