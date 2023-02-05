@@ -102,4 +102,7 @@ stream = ExtResource( 2 )
 [node name="tomato_player2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 
+[node name="tween" type="Tween" parent="."]
+
 [connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]
+[connection signal="tween_all_completed" from="tween" to="." method="_on_tween_tween_all_completed"]
