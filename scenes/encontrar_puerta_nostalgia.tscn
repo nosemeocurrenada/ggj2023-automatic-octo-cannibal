@@ -11,6 +11,12 @@ script = ExtResource( 3 )
 
 [node name="backdoors" parent="." instance=ExtResource( 5 )]
 
+[node name="closed_door_2" parent="backdoors/door2" index="2" instance=ExtResource( 4 )]
+position = Vector2( -1, 23 )
+
+[node name="closed_door_3" parent="backdoors/door3" index="2" instance=ExtResource( 4 )]
+position = Vector2( 2, -27 )
+
 [node name="little_chef" parent="." instance=ExtResource( 1 )]
 position = Vector2( 124, 187 )
 
@@ -20,4 +26,8 @@ position = Vector2( -73, 180 )
 [node name="portal" parent="." instance=ExtResource( 4 )]
 position = Vector2( 768, -48 )
 
+[connection signal="player_entered" from="backdoors/door2/closed_door_2" to="." method="_on_closed_door_2_player_entered"]
+[connection signal="player_entered" from="backdoors/door3/closed_door_3" to="." method="_on_closed_door_3_player_entered"]
 [connection signal="player_entered" from="portal" to="." method="_on_portal_player_entered"]
+
+[editable path="backdoors"]
