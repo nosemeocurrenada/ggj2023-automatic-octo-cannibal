@@ -4,6 +4,7 @@
 [ext_resource path="res://assets/viejito.png" type="Texture" id=2]
 
 [node name="viejito" instance=ExtResource( 1 )]
+z_index = 1
 
 [node name="sprite" parent="." index="0"]
 visible = false

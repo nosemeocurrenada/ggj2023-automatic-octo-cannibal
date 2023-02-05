@@ -13,4 +13,5 @@ polygon = PoolVector2Array( 22, -12, 20, -17, 18, -20, 22, -25, 23, -33, 19, -38
 
 [node name="Sprite" type="Sprite" parent="dialog_area" index="1"]
 scale = Vector2( 0.335677, 0.335677 )
+z_index = 1
 texture = ExtResource( 2 )

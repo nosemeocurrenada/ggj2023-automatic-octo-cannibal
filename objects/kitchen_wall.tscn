@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/housey.png" type="Texture" id=1]
+[ext_resource path="res://assets/Interiors_free_48x48.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24, 24 )
@@ -20,4 +20,4 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 240, 32, 48, 48 )
+region_rect = Rect2( 432, 147, 48, 48 )
