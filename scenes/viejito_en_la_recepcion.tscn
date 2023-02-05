@@ -24,3 +24,6 @@ position = Vector2( 96, 192 )
 [connection signal="dialog" from="viejito" to="." method="_on_viejito_dialog"]
 
 [editable path="dinning_room"]
+[editable path="dinning_room/table"]
+[editable path="dinning_room/table2"]
+[editable path="dinning_room/table3"]

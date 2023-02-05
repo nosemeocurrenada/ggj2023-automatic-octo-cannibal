@@ -9,12 +9,15 @@
 script = ExtResource( 1 )
 
 [node name="little_chef" parent="." instance=ExtResource( 3 )]
-position = Vector2( 96, 192 )
+position = Vector2( 144, 192 )
 
 [node name="player_camera" parent="." instance=ExtResource( 4 )]
 position = Vector2( -336, 192 )
 
 [node name="kitchen" parent="." instance=ExtResource( 2 )]
+
+[node name="portal_to_dinning_room" parent="kitchen" index="2"]
+position = Vector2( 76, 192 )
 
 [connection signal="player_entered" from="kitchen/portal_to_dinning_room" to="." method="_on_portal_to_dinning_room_player_entered"]
 [connection signal="player_entered" from="kitchen/portal_to_backdoors" to="." method="_on_portal_to_backdoors_player_entered"]
