@@ -1,7 +1,7 @@
 extends GameScene
 
 const block_scene = preload("res://objects/bloques/block.tscn")
-const REQUIRED_BLOCKS = 1
+const REQUIRED_BLOCKS = 4
 var won = false
 
 func is_any_action_just_pressed():
