@@ -30,6 +30,10 @@ config/name="ggj2023-automatic-octo-cannibal"
 run/main_scene="res://scenes/menu/intro.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+BackgroundSingleton="*res://objects/background_singleton.tscn"
+
 [display]
 
 window/size/width=512

@@ -8,7 +8,7 @@ func _ready():
 
 
 func _cutscene():
-	pass
+	BackgroundSingleton.start_music()
 
 
 func _process(delta):
