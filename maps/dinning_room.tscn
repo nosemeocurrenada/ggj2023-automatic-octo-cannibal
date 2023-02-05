@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://objects/wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/portal.tscn" type="PackedScene" id=2]
 [ext_resource path="res://objects/table.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/mesa.png" type="Texture" id=4]
+[ext_resource path="res://objects/door.tscn" type="PackedScene" id=5]
 
 [node name="dinning_room" type="Node2D"]
 
@@ -171,7 +173,53 @@ position = Vector2( 1008, 336 )
 position = Vector2( 1056, 336 )
 
 [node name="portal_to_kitchen" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1056, 192 )
+position = Vector2( 1030, 194 )
 
 [node name="table" parent="." instance=ExtResource( 3 )]
-position = Vector2( 432, 144 )
+position = Vector2( 336, 192 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="sprite" parent="table" index="0"]
+visible = false
+
+[node name="Sprite" type="Sprite" parent="table"]
+scale = Vector2( 0.331654, 0.331654 )
+texture = ExtResource( 4 )
+
+[node name="table2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 528, 192 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="sprite" parent="table2" index="0"]
+visible = false
+
+[node name="Sprite" type="Sprite" parent="table2"]
+scale = Vector2( 0.331654, 0.331654 )
+texture = ExtResource( 4 )
+
+[node name="table3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 720, 192 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="sprite" parent="table3" index="0"]
+visible = false
+
+[node name="Sprite" type="Sprite" parent="table3"]
+scale = Vector2( 0.331654, 0.331654 )
+texture = ExtResource( 4 )
+
+[node name="door" parent="." instance=ExtResource( 5 )]
+position = Vector2( 48, 192 )
+
+[node name="door2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1056, 192 )
+
+[editable path="table"]
+[editable path="table2"]
+[editable path="table3"]

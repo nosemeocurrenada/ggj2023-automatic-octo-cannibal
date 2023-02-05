@@ -10,7 +10,7 @@ func _on_portal_to_dinning_room_player_entered():
 
 func _on_portal_to_backdoors_player_entered():
 	yield(dialog('big_chef', 'Todavía necesitas descubrir los siguientes ingredientes de la receta antes de cosecharlos'), 'done')
-
+	
 
 func _on_cooking_pot_player_entered(body):
 	if body.is_in_group("player"):

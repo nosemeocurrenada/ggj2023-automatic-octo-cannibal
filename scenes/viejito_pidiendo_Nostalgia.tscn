@@ -10,7 +10,7 @@
 script = ExtResource( 1 )
 
 [node name="viejito" parent="." instance=ExtResource( 4 )]
-position = Vector2( 384, 144 )
+position = Vector2( 336, 144 )
 
 [node name="dinning_room" parent="." instance=ExtResource( 5 )]
 
@@ -24,3 +24,6 @@ position = Vector2( 192, 240 )
 [connection signal="player_entered" from="dinning_room/portal_to_kitchen" to="." method="_on_portal_to_kitchen_player_entered"]
 
 [editable path="dinning_room"]
+[editable path="dinning_room/table"]
+[editable path="dinning_room/table2"]
+[editable path="dinning_room/table3"]
