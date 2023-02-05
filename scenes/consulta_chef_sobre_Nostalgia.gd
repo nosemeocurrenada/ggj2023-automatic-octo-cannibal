@@ -18,7 +18,7 @@ func _on_portal_to_backdoors_player_entered():
 	if not talked_to_big_chef:
 		yield(dialog("big_chef", "No quieres que te indique qué cosechar?"), "done")
 	else:
-		assert(false, "TODO: Not implemented")
+		get_tree().change_scene("res://scenes/encontrar_puerta_nostalgia.tscn")
 
 func _on_portal_to_dinning_room_player_entered():
 	yield(dialog("big_chef", "Deberías ir a cosechar el primer ingrediente"), "done")

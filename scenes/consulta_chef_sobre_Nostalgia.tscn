@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://scenes/consulta_chef_sobre_X.gd" type="Script" id=1]
+[ext_resource path="res://scenes/consulta_chef_sobre_Nostalgia.gd" type="Script" id=1]
 [ext_resource path="res://maps/kitchen.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/little_chef.tscn" type="PackedScene" id=3]
 [ext_resource path="res://objects/player_camera.tscn" type="PackedScene" id=4]
