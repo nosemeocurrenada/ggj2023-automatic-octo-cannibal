@@ -4,7 +4,10 @@ var talked_to_big_chef = false
 
 
 func _cutscene():
-	dialog("door", "** Sonido de llamador de ángeles **")
+#	BackgroundSingleton.stop_music()
+	$llamador_de_angeles.play()
+	yield(dialog("door", "** Sonido de llamador de ángeles **"), "done")
+	BackgroundSingleton.start_music()
 
 
 func _on_portal_to_backdoors_player_entered():

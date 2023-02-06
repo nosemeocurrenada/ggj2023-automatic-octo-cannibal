@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://characters/little_chef.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/player_camera.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/viejito_llama_a_la_puerta.gd" type="Script" id=3]
+[ext_resource path="res://assets/llamador_de_angeles.ogg" type="AudioStream" id=4]
 [ext_resource path="res://maps/kitchen.tscn" type="PackedScene" id=5]
 
 [node name="viejito_llama_a_la_puerta" type="Node2D"]
@@ -16,6 +17,11 @@ position = Vector2( 384, 384 )
 
 [node name="player_camera" parent="." instance=ExtResource( 2 )]
 position = Vector2( 96, 480 )
+
+[node name="llamador_de_angeles" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 4 )
+volume_db = -10.649
 
 [connection signal="player_entered" from="kitchen/portal_to_dinning_room" to="." method="_on_portal_to_dinning_room_player_entered"]
 [connection signal="player_entered" from="kitchen/portal_to_backdoors" to="." method="_on_portal_to_backdoors_player_entered"]
