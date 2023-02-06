@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/background_tomato.ogg-82752c20bef915e114cd87755aab07a0.oggstr"
+
+[deps]
+
+source_file="res://assets/background_tomato.ogg"
+dest_files=[ "res://.import/background_tomato.ogg-82752c20bef915e114cd87755aab07a0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

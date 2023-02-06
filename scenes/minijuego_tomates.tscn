@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/minijuego_tomates.gd" type="Script" id=1]
+[ext_resource path="res://assets/tomato1.ogg" type="AudioStream" id=2]
 [ext_resource path="res://objects/games/tomates/tomato.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/sprites.png" type="Texture" id=4]
 [ext_resource path="res://assets/stolen_hills.png" type="Texture" id=5]
+[ext_resource path="res://assets/background_tomato.ogg" type="AudioStream" id=6]
+[ext_resource path="res://assets/tomato2.ogg" type="AudioStream" id=7]
 
 [sub_resource type="CapsuleShape2D" id=11]
 radius = 24.0
@@ -85,5 +88,15 @@ position = Vector2( 300, 25 )
 
 [node name="timer" type="Timer" parent="."]
 autostart = true
+
+[node name="bg" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+
+[node name="tomato_player1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="tomato_player2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
 
 [connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]
