@@ -38,6 +38,8 @@ BackgroundSingleton="*res://objects/background_singleton.tscn"
 
 window/size/width=512
 window/size/height=256
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [gui]
 
