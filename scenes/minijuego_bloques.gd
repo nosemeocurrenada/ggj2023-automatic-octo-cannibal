@@ -4,6 +4,10 @@ const block_scene = preload("res://objects/games/bloques/block.tscn")
 const REQUIRED_BLOCKS = 4
 var won = false
 
+func _ready():
+	dialog("dialog", "Utiliza la barra espaciadora para construir el primer hogar del visitante")
+	dialog("dialog", "Para lograrlo, debes mantenerla presionada y soltar cuando sea el momento correcto")
+
 func is_any_action_just_pressed():
 	return (
 		Input.is_action_just_pressed("ui_accept") or

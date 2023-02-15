@@ -7,6 +7,10 @@ var rng = RandomNumberGenerator.new()
 var score = 0
 var game_finished = false # por algun motivo no funcionaba desde _process
 
+func _ready():
+	yield(dialog("dialog", "Recolecta los tomates maduros para preparar la salsa de la nonna"), "done")
+	yield(dialog("dialog", "Para lograrlo, mueve la olla por el jardín utilizando las comandos de izquierda o derecha"), "done")
+
 
 func _cutscene():
 	$tomate.queue_free()
@@ -19,8 +23,7 @@ func _process(delta):
 		direction = Vector2.LEFT
 	if Input.is_action_pressed("ui_right"):
 		direction = Vector2.RIGHT
-	if Input.is_action_just_pressed("ui_accept"):
-		_end_game()
+
 	$player.move_and_slide(direction.normalized() * velocity)
 
 	$score.text = '%s' % (GOAL - score)

@@ -24,11 +24,7 @@ func set_character(character):
 
 func is_any_action_just_pressed():
 	return (
-		Input.is_action_just_pressed("ui_accept") or
-		Input.is_action_just_pressed("ui_right") or 
-		Input.is_action_just_pressed("ui_down") or 
-		Input.is_action_just_pressed("ui_up") or 
-		Input.is_action_just_pressed("ui_left")
+		Input.is_action_just_pressed("ui_accept")
 	)
 
 func _process(delta):
